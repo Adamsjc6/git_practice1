@@ -40,7 +40,7 @@ public class MazeGuesser extends AssignValue
         }
         else
         {
-            "Game over :(. Play again?"
+            return "Game over :(. Play again?";
         }
     }
 }
