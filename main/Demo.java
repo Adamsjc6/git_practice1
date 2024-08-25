@@ -7,6 +7,6 @@ public class Demo
 {
     public void main(String[] args)
     {
-        Scanner scan = new Scanner(System.in);
+        
     }
 }
