@@ -13,6 +13,8 @@ import java.util.Scanner;
     private String[] countries;
     private int lives;
     private int score;
+    private String saved;
+    private String saved2;
     private static final int MAXIMUM = 6;
     private static final int MINIMUM = 0;
 
@@ -39,21 +41,25 @@ import java.util.Scanner;
         System.out.println(stringPrint(1));
         
         String s = scan.nextLine().toUpperCase();
-        
-        if (s.equals("Y"))
-        {
+    
             while (!s.equals("q"))
             {
                 stringPrint(2);
+                if (scan.nextLine().equals(saved2))
+                {
+                    System.out.prinln("You got a point!");
+                    this.points++;
+                }
+                else
+                {
+                    lives--;
+                }
             }
-        }
-        else if (s.equals())
-        {
-
-        }
 
         System.out.println("Goodbye :)");
-    }
+
+        scan.close();
+    } 
 
     public String stringPrint(int t)
     {   
@@ -65,33 +71,28 @@ import java.util.Scanner;
         }
         else if (t == 2)
         {
-            String p;
+            String p = "";
 
             if (lives > 0)
             {
                 int random = AssignValue.setValue(6, 0);
-                int random2 = AssignValue.setValue(1,0);
 
-                if (random2 == 0)
-                {
-                    p += String.format("%s", capitals[random],);
-                }
-                else
-                {
-                    p += String.format("%s", capitals[random]);
-                }  
+                p += String.format("%s", countries[random]);
+                
+                this.saved = countries[random];
+                this.saved = capitals[random];
+                
+                p += "\n What is the capital of this country?";
+
+                return p;
             }
             else
             {
-                System.out.println("Game over :(\nwant to restart? Y/N");
-            }
-        }
-        else if (t == 3)
-        {
-
+                return "Game over :(\nwant to restart? Y/N";
+            } 
         }
         
-        
+        return "";
     }
 
 }

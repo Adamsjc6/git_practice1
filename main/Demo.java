@@ -8,7 +8,7 @@ import git_practice1.guesser.MazeGuesser;
  */
 public class Demo 
 {
-    public void main(String[] args)
+    public static void main(String[] args)
     {
         Scanner scan = new Scanner(System.in);
         System.out.println("Hello, type either 1 (for game 1), 2 (for game 2), or q for quit");

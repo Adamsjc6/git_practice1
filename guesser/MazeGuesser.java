@@ -27,10 +27,31 @@ public class MazeGuesser extends AssignValue
        score = 0;
     }
 
+    public void play()
+    {
+        Scanner scan = new Scanner(System.in);
+        
+        System.out.println("pick a random number between 0 and 7");
+        while (!scan.nextLine().equals("q"))
+        {
+            int guessInt = scan.nextInt();
+            if (goal == guessInt)
+            {
+                System.out.println();
+            }
+            else
+            {
+                System.out.println();
+            }
+        }
+        
+        scan.close();
+    }
+
     /**
      * @return different strings for the various points of the game
      */
-    public String stringPrint()
+    public String stringPrint(int t)
     {
         String p;
 
