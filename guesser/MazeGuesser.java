@@ -22,7 +22,7 @@ public class MazeGuesser extends AssignValue
      */
     public MazeGuesser()
     {
-       goal = AssignValue.setValue(0, 7);
+       goal = AssignValue.setValue(7, 0);
        lives = 3;
        score = 0;
     }
@@ -31,37 +31,25 @@ public class MazeGuesser extends AssignValue
     {
         Scanner scan = new Scanner(System.in);
         
+        System.out.println("hit a random key");
+
+        String s = "";
+        s = scan.nextLine();
         System.out.println("pick a random number between 0 and 7");
-        while (!scan.nextLine().equals("q"))
+        while (!s.equals("q"))
         {
             int guessInt = scan.nextInt();
             if (goal == guessInt)
             {
-                System.out.println();
+                System.out.println("you got a point");
             }
             else
             {
-                System.out.println();
+                System.out.println("wrong answer");
             }
         }
         
         scan.close();
     }
 
-    /**
-     * @return different strings for the various points of the game
-     */
-    public String stringPrint(int t)
-    {
-        String p;
-
-        if (lives > 0)
-        {
-
-        }
-        else
-        {
-            return "Game over :(. Play again?";
-        }
-    }
 }

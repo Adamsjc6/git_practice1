@@ -38,17 +38,16 @@ import java.util.Scanner;
     public void play()
     {
         Scanner scan = new Scanner(System.in);
-        System.out.println(stringPrint(1));
-        
-        String s = scan.nextLine().toUpperCase();
-    
+        String s = "";
+
             while (!s.equals("q"))
             {
-                stringPrint(2);
-                if (scan.nextLine().equals(saved2))
+                System.out.println(stringPrint(2));
+                s = scan.nextLine();
+                if (s.equals(saved2))
                 {
-                    System.out.prinln("You got a point!");
-                    this.points++;
+                    System.out.println("You got a point!");
+                    this.score++;
                 }
                 else
                 {

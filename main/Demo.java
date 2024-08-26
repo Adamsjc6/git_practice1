@@ -15,12 +15,12 @@ public class Demo
         
         String q = scan.nextLine();
         
-        if (q.equals(1))
+        if (q.equals("1"))
         {
             CapitalGuesser cg = new CapitalGuesser();
             cg.play();
         }
-        else if(q.equals(2))
+        else if(q.equals("2"))
         {
             MazeGuesser mg = new MazeGuesser();
             mg.play();
